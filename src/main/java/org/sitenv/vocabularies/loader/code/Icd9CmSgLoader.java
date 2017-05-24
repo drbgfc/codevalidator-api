@@ -7,8 +7,9 @@ import org.springframework.stereotype.Component;
  */
 @Component(value = "ICD9CM_SG")
 public class Icd9CmSgLoader extends Icd9BaseLoader {
-    @Override
-    protected void setOID(String oid) {
-        oid = CodeSystemOIDs.ICD9CMSG.codesystemOID();
+
+    public Icd9CmSgLoader() {
+        this.oid = CodeSystemOIDs.ICD9CMSG.codesystemOID();
     }
+
 }
